@@ -179,10 +179,6 @@ body {
     background-color: #0056b3;
     border-color: #0056b3;
 }
-.btn-primary:focus,
-.btn-primary.focus {
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
-}
 
 .is-invalid {
     border-color: #dc3545;

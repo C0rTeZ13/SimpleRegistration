@@ -14,7 +14,6 @@ const app = createApp(App).use(router)
  * to use in your application's views. An example is included for you.
  */
 
-import ExampleComponent from './components/ExampleComponent.vue';
 import App from "./App.vue";
 import router from "./router";
 
