@@ -28,7 +28,6 @@ class AppServiceProvider extends ServiceProvider
                 ['id' => 3, 'name' => 'Олег', 'email' => 'oleg-skab@mail.ru'],
                 ['id' => 4, 'name' => 'Максим', 'email' => 'max-z@mail.ru']
             ]);
-            Log::notice(Cache::get('users'));
         }
     }
 }
