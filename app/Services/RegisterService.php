@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 use Illuminate\Http\Request;
@@ -16,9 +17,8 @@ class RegisterService
                 'id' => last($users)['id'] + 1,
                 'name' => $request->input('name'),
                 'email' => $request->input('email')
-                ];
-        }
-        catch(\Exception) {
+            ];
+        } catch (\Exception) {
             return response()->json(["error" => \Exception::class], 400);
         }
         Log::notice('Пользователь успешно зарегистрирован. ' . "Пользователь: " . $request->input('email'));
@@ -28,7 +28,8 @@ class RegisterService
 
         return response()->json(["data" => ["Пользователь успешно зарегистрирован!"]], 200);
     }
-    public function check_user_exists(Request $request): bool|\Illuminate\Http\JsonResponse
+
+    public function checkUserExists(Request $request): bool|\Illuminate\Http\JsonResponse
     {
         $users = Cache::get('users');
         foreach ($users as $user) {

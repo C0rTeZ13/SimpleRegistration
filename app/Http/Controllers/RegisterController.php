@@ -19,14 +19,12 @@ class RegisterController extends Controller
     {
         // Валидация
         $validation_result = $this->registerService->validate($request);
-        if ($validation_result instanceof JsonResponse)
-        {
+        if ($validation_result instanceof JsonResponse) {
             return $validation_result;
         }
         // Проверка на существование пользователя
-        $user_exists_result = $this->registerService->check_user_exists($request);
-        if ($user_exists_result instanceof JsonResponse)
-        {
+        $user_exists_result = $this->registerService->checkUserExists($request);
+        if ($user_exists_result instanceof JsonResponse) {
             return $user_exists_result;
         }
         // Регистрация нового пользователя
